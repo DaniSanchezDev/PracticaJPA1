@@ -1,10 +1,14 @@
 package com.edu.daniel.PracticaJPA1.model.entities;
 import java.time.*;
 
-import org.apache.catalina.startup.Catalina;
-
 import com.edu.daniel.PracticaJPA1.model.enumerated.Categoria;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name = "cliente")
 public class Cliente {
 
     private Long idCliente;
