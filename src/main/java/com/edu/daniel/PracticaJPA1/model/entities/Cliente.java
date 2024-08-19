@@ -25,6 +25,7 @@ public class Cliente {
     private Long idCliente;
     private String nombre;
     private String apellido1;
+    @Column(name = "apellido2",nullable = true)
     private String apellido2;
     private LocalDate fechaNacimiento;
     private int telefono;
