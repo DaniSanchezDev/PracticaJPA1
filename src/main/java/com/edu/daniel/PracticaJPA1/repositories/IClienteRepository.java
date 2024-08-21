@@ -1,5 +1,6 @@
 package com.edu.daniel.PracticaJPA1.repositories;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +12,8 @@ import com.edu.daniel.PracticaJPA1.model.enumerated.Categoria;
 public interface IClienteRepository extends JpaRepository <Cliente,Long>{
 
     public List<Cliente> findByCategoria(Categoria categoria);
+    
+   // public List<Cliente> findByCategoriaAndClienteGreaterThan(Categoria categoria, LocalDate fechaNacimiento);
+
+
 }
