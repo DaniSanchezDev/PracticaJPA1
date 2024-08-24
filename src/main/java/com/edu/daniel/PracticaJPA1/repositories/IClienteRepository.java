@@ -13,7 +13,7 @@ public interface IClienteRepository extends JpaRepository <Cliente,Long>{
 
     public List<Cliente> findByCategoria(Categoria categoria);
     
-   // public List<Cliente> findByCategoriaAndClienteGreaterThan(Categoria categoria, LocalDate fechaNacimiento);
+    //public List<Cliente> findByCategoriaAndClienteGreaterThan(Categoria categoria, LocalDate fechaNacimiento);
 
 
 }
