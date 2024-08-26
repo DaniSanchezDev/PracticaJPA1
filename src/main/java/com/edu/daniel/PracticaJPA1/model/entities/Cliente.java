@@ -1,11 +1,8 @@
 package com.edu.daniel.PracticaJPA1.model.entities;
 import java.time.*;
 
-import org.hibernate.annotations.Collate;
-
 import com.edu.daniel.PracticaJPA1.model.enumerated.Categoria;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
