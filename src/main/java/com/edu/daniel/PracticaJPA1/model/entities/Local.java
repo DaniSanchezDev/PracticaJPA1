@@ -68,6 +68,13 @@ public class Local {
         this.metrosCuadrados = metrosCuadrados;
     }
 
+
+    @Override
+    public String toString() {
+        return "Local [idLocal=" + idLocal + ", nombre=" + nombre + ", aforoMax=" + aforoMax + ", metrosCuadrados="
+                + metrosCuadrados + "]";
+    }
+
     
 
 
