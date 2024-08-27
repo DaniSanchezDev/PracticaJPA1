@@ -5,15 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@Entity
+@Table (name = "visita")
 public class Visita {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idVisita;
     private Long idCliente;
     private Long idLocal;
-    private LocalDate fechaVisita;
 
 }
