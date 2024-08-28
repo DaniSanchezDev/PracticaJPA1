@@ -7,10 +7,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.*;
 
 
 @Entity
@@ -29,6 +34,14 @@ public class Cliente {
     @Enumerated(EnumType.STRING) // mapea el enum como string
     @Column(name = "categoria", columnDefinition = "ENUM('VIP', 'REGULAR', 'INVITADO','CASUAL')")
     private Categoria categoria;
+
+    @ManyToMany (fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "visita",
+        joinColumns = @JoinColumn(name = "idCliente"),
+        inverseJoinColumns = @JoinColumn(name = "idLocal")
+    )
+    private Set <Local> locales = new HashSet<>();
 
 
     public Cliente() {
