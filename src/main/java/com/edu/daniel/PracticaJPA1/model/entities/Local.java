@@ -2,10 +2,13 @@ package com.edu.daniel.PracticaJPA1.model.entities;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.*;
 
 @Entity
 @Table (name = "local")
@@ -16,6 +19,9 @@ public class Local {
     private String nombre;
     private int aforoMax;
     private Double metrosCuadrados;
+
+    @ManyToMany(mappedBy = "locales", fetch = FetchType.EAGER)
+    private Set<Cliente> clientes = new HashSet<>();
 
 
     public Local() {}
