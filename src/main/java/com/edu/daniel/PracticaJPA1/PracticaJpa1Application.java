@@ -37,6 +37,7 @@ public class PracticaJpa1Application implements CommandLineRunner{
 	// System.out.println("VIPs con más de 20 años: " + clienteRepo.findByCategoriaAndClienteGreaterThan(Categoria.VIP, LocalDate.of(2014, 12, 31)));
 	// 3ºBuscar locales de aforo entre 50 y 100
 	System.out.println(localRepo.findByAforoMaxBetween(50, 100));
+	// 4º encontrar un cliente según su id y poder ver en qué locales sale de fiesta
 
 	
 	}
