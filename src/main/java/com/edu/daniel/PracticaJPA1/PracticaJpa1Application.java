@@ -25,10 +25,10 @@ public class PracticaJpa1Application implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 	//	System.out.println(clienteRepo.findAll());
-
+	System.out.println(clienteRepo.findByCategoria(Categoria.VIP));
 
 	// 1º Buscar por categoria VIP
-	System.out.println(clienteRepo.findByCategoria(Categoria.VIP));
+	// System.out.println(clienteRepo.findByCategoria(Categoria.VIP));
 	// 2º Buscar por categoria VIP y mayores de 20
 	// System.out.println("VIPs con más de 20 años: " + clienteRepo.findByCategoriaAndClienteGreaterThan(Categoria.VIP, LocalDate.of(2014, 12, 31)));
 
